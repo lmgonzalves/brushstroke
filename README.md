@@ -2,6 +2,8 @@
 
 Brushstrokes on the web: draw solid colors, images, or even HTML!
 
+[**DEMO**](https://lmgonzalves.github.io/brushstroke/)
+
 ## Usage
 
 The `brushstroke` library has no mandatory dependencies, but:
