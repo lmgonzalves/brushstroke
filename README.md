@@ -4,6 +4,8 @@ Brushstrokes on the web: draw solid colors, images, or even HTML!
 
 [**DEMO**](https://lmgonzalves.github.io/brushstroke/)
 
+[**TUTORIAL**](https://scotch.io/tutorials/drawing-creative-brushstrokes-with-javascript)
+
 ## Usage
 
 The `brushstroke` library has no mandatory dependencies, but:
