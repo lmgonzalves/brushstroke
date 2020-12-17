@@ -195,6 +195,10 @@
                 this.x = x;
                 this.y = y;
 
+                if(this._latestPos.x === this.x && this._latestPos.y === this.y) {
+                    return;
+                }
+
                 if (this._drops.length) {
                     var drops  = this._drops,
                         drop,
