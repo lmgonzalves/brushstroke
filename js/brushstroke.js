@@ -524,14 +524,13 @@
 
     // Get random points in a 2d space
 
-    function randomize(num, width, height) {
+    function randomize(num, width, height, offsetX, offsetY) {
         var numPoints = num || 10;
         var points = [];
         for (var i = 0; i < numPoints; i++) {
-            points.push(
-                (width * Math.random() * 0.9 + width * 0.05) | 0,
-                (height * Math.random() * 0.9 + height * 0.05) | 0
-            );
+            var x = ((width * Math.random() * 0.9 + width * 0.05) | 0) + offsetX;
+            var y = ((height * Math.random() * 0.9 + height * 0.05) | 0) + offsetY;
+            points.push(x, y);
         }
         return points;
     }
@@ -609,7 +608,9 @@
             repeat: 'no-repeat',
             stretch: false,
             centered: false,
-            queue: false
+            queue: false,
+            containX: false,
+            containY: false
         };
 
         this.init(options);
@@ -914,7 +915,26 @@
             },
             'points': function(o) {
                 var points = o.points || 0;
-                points = is.num(points) ? randomize(points, o.width, o.height) : points;
+
+                if (is.num(points)) {
+                  var width = o.width;
+                  var height = o.height;
+                  var offsetX = 0;
+                  var offsetY = 0;
+
+                  if (o.containX) {
+                    width = width - o.size;
+                    offsetX = o.size / 2;
+                  }
+
+                  if (o.containY) {
+                    height = height - o.size;
+                    offsetY = o.size / 2;
+                  }
+
+                  points = randomize(points, width, height, offsetX, offsetY);
+                }
+
                 points = getCurvePoints(points, o.tension);
                 this.render(extend(o, {points: points, startX: points[0], startY: points[1]}));
             }

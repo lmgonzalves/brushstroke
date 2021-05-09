@@ -66,6 +66,8 @@ For customization, you can pass `options` (in object notation) to `Brushstroke` 
 |`repeat`                 | String                  | 'no-repeat'     | Indicates how to repeat the image. Possible values are: `no-repeat`, `repeat`, `repeat-x`, `repeat-y`. |
 |`stretch`                | Boolean                 | true            | Indicates if the image should be stretched in canvas. |
 |`queue`                  | Boolean                 | false           | Indicates if animations should be queued. |
+|`containX`               | Boolean                 | false           | If true, random point generation will keep brushstrokes within the canvas along the x-direction to avoid clipping along vertical boundaries (provided that `size` is less than `width`.) |
+|`containY`               | Boolean                 | false           | If true, random point generation will keep brushstrokes within the canvas along the y-direction to avoid clipping along horizontal boundaries (provided that `size` is less than `height`.) |
 
 ### Possible animation values
 
