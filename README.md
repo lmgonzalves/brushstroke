@@ -4,7 +4,7 @@ Brushstrokes on the web: draw solid colors, images, or even HTML!
 
 [**DEMO**](https://lmgonzalves.github.io/brushstroke/)
 
-[**TUTORIAL**](https://scotch.io/tutorials/drawing-creative-brushstrokes-with-javascript)
+[**TUTORIAL**](https://www.digitalocean.com/community/tutorials/drawing-creative-brushstrokes-with-javascript)
 
 ## Usage
 
